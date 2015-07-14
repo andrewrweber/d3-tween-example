@@ -17,11 +17,10 @@ circle.enter().append('circle')
 
 d3.select('.position-track').text("X: 300, Y: 200");
 
-//d3.select('.position-track').;
-
 var run = function(){
   circle
   .transition().duration(10000)
+  // Add the tween function to the transition
   .tween('track-position', tracker)
   .attr("cx", 100)
   .attr("cy", 100);
@@ -30,6 +29,7 @@ var run = function(){
 var reset = function(){
   circle
   .transition().duration(2000)
+  // Add the tween function to the transition
   .tween('track-position', tracker)
   .attr("cx", 300)
   .attr("cy", 200);
@@ -38,6 +38,9 @@ var reset = function(){
 var tracker = function(){
   var lastX = 0;
   var lastY = 0;
+  
+  // This function returned by tracker is what will execute at each 'tick'
+  // in the transition animation
   return function(){
     var curX = Math.floor(circle.attr('cx'));
     var curY = Math.floor(circle.attr('cy'));
