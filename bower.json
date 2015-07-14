@@ -1,0 +1,21 @@
+{
+  "name": "tweens",
+  "version": "0.0.0",
+  "authors": [
+    "Andrew Weber <andrew.robert.weber@gmail.com>"
+  ],
+  "description": "an example of using tweens in d3",
+  "main": "app.js",
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "d3": "~3.5.6",
+    "underscore": "~1.8.3"
+  }
+}
